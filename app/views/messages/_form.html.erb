@@ -2,11 +2,11 @@
   <div class="panel panel-body">入力箇所</div>
     
     <div class="panel-body">
-      <%= form_for(Message.new, html: {class: "form-horizontal"}) do |f| %>
+      <%= form_for(@message, html: {class: "form-horizontal"}) do |f| %>
         
       <% if @message.errors.present? %>
       <div class="alert alert-danger">
-        <%= alert %>
+        <%= alert %>rails s -p $PORT -b $IP
         <ul>
           <% @message.errors.full_messages.each do |full_message| %>
           <li>
