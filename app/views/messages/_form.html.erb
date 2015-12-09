@@ -19,7 +19,7 @@
       <div class="form-group">
         <label for="message_age" class="col-md-1 control-label">年齢</label>
         <div class="col-md-10">
-          <%= f.select :age,  ["10代", "20代", "30代", "40代", "50代", "60代以上"], {}, class: "form-control", role: "menu" %>
+          <<%= f.number_field :age, class: "form-control" %>`
         </div>
       </div>        
     
