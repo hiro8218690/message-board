@@ -7,6 +7,11 @@ class MessagesController < ApplicationController
     @messages = Message.all
     @message = Message.new
   end
+
+  def destroy
+    @message.destroy
+    redirect_to root_path, notice: 'メッセージを削除しました'
+  end
   
   def edit
   end
@@ -20,13 +25,6 @@ class MessagesController < ApplicationController
       render 'edit'
     end
   end
-  
-  def destroy
-    @message.destroy
-    redirect_to root_path, notice: 'メッセージを削除しました'
-  end  
-
-
 
 
   ## ここから追記
@@ -45,7 +43,7 @@ class MessagesController < ApplicationController
   private
   
   def message_params
-    params.require(:message).permit(:name, :body)
+    params.require(:message).permit(:name, :body, :age)
   end
   ## ここまで
   
